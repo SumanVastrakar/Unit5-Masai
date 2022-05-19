@@ -1,0 +1,76 @@
+{
+  "GithubRepo": [
+    {
+      "id": 1,
+      "repoName": "React Router Final",
+      "marksObtain" : 91
+    
+    },
+    {
+      "id": 2,
+      "repoName": "React UseEffect",
+      "marksObtain" : 92
+    },
+    {
+      "id": 3,
+      "repoName": "Weather App",
+      "marksObtain" : 93
+    
+    },
+    {
+      "id": 4,
+      "repoName": "Movie App",
+      "marksObtain" : 94
+    
+    },
+    {
+      "id": 5,
+      "repoName": "React State Lifting",
+      "marksObtain" : 95
+    },
+    {
+      "id": 6,
+      "repoName": "React Router Final",
+      "marksObtain" : 96
+    
+    },
+    {
+      "id": 7,
+      "repoName": "React Router Final",
+      "marksObtain" : 97
+    
+    },
+    {
+      "id": 8,
+      "repoName": "React Tic Tac Toe",
+      "marksObtain" : 98
+    
+    },
+    {
+      "id": 9,
+      "repoName": "How React works",
+      "marksObtain" : 99
+
+    
+    },
+    {
+      "id": 10,
+      "repoName": "Restaurent App",
+    "marksObtain" : 100
+    
+    },
+    {
+      "id": 11,
+      "repoName": "Construct week project",
+      "marksObtain" : 91
+    
+    },
+    {
+      "id": 12,
+      "repoName": "React Interview questions",
+      "marksObtain" : 90
+    
+    }
+  ]
+ 
+}
