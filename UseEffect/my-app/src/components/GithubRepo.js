@@ -7,8 +7,8 @@ export default function GithubRepo() {
     const [page, setPage] = useState(1);
     useEffect(() => {
         async function getData() {
-            // let data = await fetch(`http://localhost:8080/GithubRepo?_page=${page}&_limit=12`).then((d) => d.json());
-            let data = await fetch(`http://localhost:8080/GithubRepo`).then((d) => d.json());
+            let data = await fetch(`http://localhost:8080/GithubRepo?_page=${page}&_limit=3`).then((d) => d.json());
+            // let data = await fetch(`http://localhost:8080/GithubRepo`).then((d) => d.json());
             setRepo(data);
         }
         getData();
@@ -32,25 +32,27 @@ export default function GithubRepo() {
     console.log(repo)
 
     //sorting control 
-    // const sortingHandle = (selectedValue) =>{
-    //     if(selectedValue =="asc"){
-    //         console.log("is clicked asc")
-    //         const updatedItems = originalArr.sort(function(a,b) {return a.id - b.id})
-    //         console.log("sortingHandle",selectedValue)
-    //         setRepo(updatedItems);
+    const sortingHandle = (selectedValue) =>{
+        if(selectedValue =="asc"){
+            console.log("is clicked asc")
+            const updatedItems = originalArr.sort(function(a,b) {return a.marksObtain - b.marksObtain})
+            console.log("sortingHandle",selectedValue)
+            setRepo(updatedItems);
 
 
-    //     console.log(updatedItems)
+        console.log(updatedItems)
+      
 
-    //     }else if(selectedValue =="desc"){
-    //         console.log("is clicked desc")
-    //         const updatedItems = originalArr.sort(function(a,b) {return b.id - a.id})
-    //         console.log(updatedItems)
-    //         setRepo(updatedItems);
-    //     }
+        }else if(selectedValue =="dsc"){
+            console.log("is clicked desc")
+            const updatedItems = originalArr.sort(function(a,b) {return b.marksObtain - a.marksObtain})
+            console.log(updatedItems)
+            setRepo(updatedItems);
+           
+        }
 
 
-    // }
+    }
 
     return (
         <div>
@@ -67,6 +69,7 @@ export default function GithubRepo() {
 
 
             <select style={{ width: "100px", margin: "auto" }} className="form-select" onChange={(e) => {
+                sortingHandle(e.target.value)
                 if (e.target.value == "asc") {
                     let highsort = repo;
                     highsort = highsort.sort(function (a, b) { return a.marksObtain - b.marksObtain })
@@ -110,13 +113,13 @@ export default function GithubRepo() {
                     </div>
                 ))
             }
-
-            {/* <button onClick={() => {
+{console.log("MApped")}
+            <button onClick={() => {
                 setPage(page - 1)
             }}>Prev</button>
             <button onClick={() => {
                 setPage(page + 1)
-            }}>Next</button> */}
+            }}>Next</button>
         </div>
     )
 }
