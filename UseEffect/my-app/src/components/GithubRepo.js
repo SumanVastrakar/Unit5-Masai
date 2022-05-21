@@ -5,9 +5,11 @@ export default function GithubRepo() {
     const [repo, setRepo] = useState(originalArr);
     const [searchElem, setSearchElem] = useState("")
     const [page, setPage] = useState(1);
+
+
     useEffect(() => {
         async function getData() {
-            let data = await fetch(`http://localhost:8080/GithubRepo?_page=${page}&_limit=3`).then((d) => d.json());
+            let data = await fetch(`http://localhost:8080/GithubRepo?_page=${page}&_limit=12`).then((d) => d.json());
             // let data = await fetch(`http://localhost:8080/GithubRepo`).then((d) => d.json());
             setRepo(data);
         }
@@ -109,7 +111,7 @@ export default function GithubRepo() {
                 repo.map(e => (
                     <div >
 
-                        <h5>{e.id} - {e.repoName} : {e.marksObtain}</h5>
+                        <h5>{e.id} - {e.repoName} : Marks obtain - {e.marksObtain}</h5>
                     </div>
                 ))
             }
