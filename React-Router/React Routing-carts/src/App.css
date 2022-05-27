@@ -1,0 +1,425 @@
+*{
+  margin:0;;
+  padding:0;
+  font-family: 'Bree Serif', serif;
+}
+pre{
+  font-size: larger;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 800;
+}
+#navbar{
+  display:flex;
+  align-items: center;
+  /* border:2px solid yellow; */
+   /* background-image: url(https://img.freepik.com/free-vector/blurred-valentine-s-day-wallpaper_23-2148819570.jpg?w=2000); */
+} 
+#logo{
+  margin:0px 0px;
+}
+#logo img{
+  margin:15px 25px;
+
+  object-fit: cover;
+}
+#navbar {
+  background-color: 
+
+}
+.cartImag{
+  margin-top: -20px;
+   height:80px;
+   display:end;
+   margin-left: 750px;
+   color: white;
+   border: 2px solid white;
+   width: 300px;
+   /* display:flex;
+   justify-content: center; */
+   margin-left:600px;
+   color: white;
+}
+#navbar ul{
+  display:flex;
+}
+#navbar ::before{
+  content: "";
+  /* background-color:rgb(138, 105, 111); */
+  position:absolute;
+  height:100%;
+  width:100%;
+  z-index: -1;
+  top:0px;
+  left:0px;
+  
+  
+}
+#navbar ul li{
+  /* color :white; */
+  list-style: none;
+  font-size: 1.3rem;
+}
+#navbar ul li a{
+  color:rgb(82, 17, 17);
+  display: block;
+  padding: 8px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+#navbar ul li a:hover{
+  color:black;
+  background-color: white;
+  display: block;
+  padding:3px 10px;
+  border-radius: 20px;
+  text-decoration: none;
+}
+/* home section  */
+#home{
+  display:flex;
+  flex-direction: column;
+  padding:3px 200px;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+  /* color:rgb(108, 7, 59); */
+}
+#home::before{
+  content: "";
+  background:url(https://www.datocms-assets.com/55010/1631159545-1542088413185427-j4.jpg?auto=format%2Ccompress) no-repeat center center/cover;
+  position:absolute;
+  height:100%;
+  width:100%;
+  z-index: -1;
+  opacity:0.7; 
+  margin-bottom: 400px;  
+}
+.h-primary{
+  color: ;
+  font-size: 4.5rem;
+  padding:12px;
+}
+.h-secondary{
+  color: ;
+  font-size: 2.8rem;
+  padding:12px;
+}
+#home h1{
+  font-family:Bree serif;
+  text-align: center;
+}
+#home p{margin-top: 0px;
+  font-size: 18px;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+  text-align: center;
+  font: weight 800px;
+}
+.btn{
+  padding:6px 20px;
+  border:2px solid black;
+  color:rgb(82, 17, 17);
+  margin:17px;
+  font-size: 20px;
+  font-family: Bree serif;
+  border-radius: 50px;
+  cursor:pointer;
+}
+.center{
+  text-align: center;
+  font-family: Bree serif;
+}
+#services-container::before{
+  content: "";
+  /* background:url(https://teenage.com.sg/wp-content/uploads/2018/11/BLACKPINK-Jennie-SOLO-Music-Video-Outfits-1024x436.jpg) no-repeat center center/cover; */
+  position:absolute;
+  height:100%;
+  width:100%;
+  z-index: -1;
+  opacity:0.7; 
+  margin-bottom: 400px; 
+  /* content:"";
+  position:absolute;
+background: url(https://teenage.com.sg/wp-content/uploads/2018/11/BLACKPINK-Jennie-SOLO-Music-Video-Outfits-1024x436.jpg) ;
+background-repeat:no-repeat ;
+background-size: cover;
+
+  height:60vh;
+  margin-top: -12px;
+  z-index: -1;
+  opacity:0.4; */
+}
+#services{
+margin:34px;
+display:flex;
+padding-top:0px;
+}
+.box{
+  margin-top: 1px;;
+  border:2px solid brown;
+  display:inline;
+  width:500px;
+  padding:14px;
+  margin:3px 6px;
+  border-radius: 28px;
+  background-color: rgb(245, 237, 237);
+ 
+}
+.box img{
+height:140px;
+margin:auto;
+display:block;
+
+border-radius:23px;
+}
+.h-secondary-center{
+  text-align: center;
+  font-family: Bree serif;
+}
+.h-primary-center{
+  text-align: center;
+  font-size: 45px;
+  font-family: Bree serif;
+  
+}
+/* client section */
+#clients img{
+  height:100px;
+}
+#clients{
+  display:flex;
+  justify-content: center;
+  align-items:center;
+
+}
+
+.client-item{
+  padding:20px;
+}
+#client-section::before{
+  content:" ";
+  position: absolute;
+  background:url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQv7_qQJNtjAP5bu_kNNZmmuvapfmwzObSLMQ&usqp=CAU")  no-repeat center center/cover;
+  width:100%;
+  height:40%;
+  z-index:-1;
+  opacity:0.6;
+}
+/* contact section */
+#contact{
+  margin-top: 110px;
+position:relative;
+}
+#contact::before{
+  content:" ";
+  position:absolute;
+  width:100%;
+  height:100%;
+  z-index: -1;
+  opacity:0.7;
+  background: url("https://media.istockphoto.com/photos/-picture-id1311934969?b=1&k=20&m=1311934969&s=170667a&w=0&h=UQ3F8CE5zam5mT5swIliZ9nO7dhX4ZzsALMufFdv6Ys=") no-repeat center center/cover;
+}
+footer{
+  background-color: black;
+  color: white;
+  padding:9px 20px;
+}
+#contact-box{
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  padding-bottom:34px; ;
+}
+#contact-box input,
+#contact-box textarea{
+  width:100%;
+  padding:0.5rem;
+  border-radius: 9px;
+  font-size: 1.5rem;
+
+}
+#contact-box form{
+  width:40%;
+
+}
+#contact-box label{
+  font-size: 1.3rem;
+  font-family: Bree serif;
+}
+.submitButtonContactus{
+  text-align: center;
+  margin:auto;
+  width:200px;
+  height:50px;
+  margin-top: 10px;
+  border-radius: 10px;
+  font-size: 1.3rem;
+}
+
+/* ///DataMapped */
+
+
+.restaurent_inputFields{
+  text-align: center;
+  width:50%;
+
+}
+/* body{
+  background-image: url("https://wallpapercave.com/wp/wp3108291.jpg");
+
+  /* background-repeat: no-repeat; */
+  /* background-size: cover; */
+
+
+.mappedData{
+  margin-top: 50px;
+  margin:auto;
+  font-family: 'Bree Serif', serif;
+  padding-top: 20px;
+  
+}
+.mappedCard{
+  /* border:3px solid black; */
+  /* color: whitesmoke; */
+  font-weight: 900;
+  margin:3px;
+  margin:auto;
+  padding-top: 3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 10px;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnibk8ca1zDu77ui6m-FRWTO0f_IAg15fhcrfNB7grUiopFW4TmA6NGiTy4x3WvN6jwOU&usqp=CAU");
+    background-repeat: no-repeat; 
+ background-size: cover; 
+ font-family: 'Bree Serif', serif;
+}
+.mappedCard:hover{
+  font-weight: 900;
+  margin:3px;
+  margin:auto;
+  padding-top: 3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  border-radius: 10px;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnibk8ca1zDu77ui6m-FRWTO0f_IAg15fhcrfNB7grUiopFW4TmA6NGiTy4x3WvN6jwOU&usqp=CAU");
+    background-repeat: no-repeat; 
+ background-size: cover; 
+ font-family: 'Bree Serif', serif;
+ border: 10px solid pink;
+}
+
+/* //dress designiung */
+
+
+.restaurent_inputFields{
+  text-align: center;
+  width:50%;
+  color:black;
+  font-family: 'Bree Serif', serif;
+  box-shadow: rgba(239, 236, 236, 0.3) 0px 19px 38px, rgba(226, 221, 221, 0.22) 0px 15px 12px;
+
+  margin-top: 30px;
+  border-radius: 50%;
+
+}
+.restaurent_inputFields input {
+  height:50px;
+
+}
+.OuterBlackborder{
+  margin-top: 50px;
+  border:10px solid Black;
+  width:70%;
+  margin:auto;
+  border-radius: 50%;
+  height:80vh;
+}
+*{
+  font-family: 'Bree Serif', serif;
+}
+.FavouriteDresses{
+  padding:6px 20px;
+  border:2px solid black;
+  color:rgb(82, 17, 17);
+  margin:17px;
+  font-size: 20px;
+  font-family: Bree serif;
+  border-radius: 50px;
+  cursor:pointer;
+  /* background-color: aliceblue;
+  width:100px;
+  height:50px; */
+}
+.FavouriteDresses:hover{
+  padding:6px 20px;
+  border:2px solid black;
+  color:rgb(82, 17, 17);
+  margin:17px;
+  font-size: 20px;
+  font-family: Bree serif;
+  border-radius: 50px;
+  cursor:pointer;
+  background-color:whitesmoke;
+  width:500px;
+  height:70px;
+  font-size: 25px;
+}
+.details{
+  text-decoration:underline;
+  color:black;
+
+}
+.dressDetailsDiv{
+  width:80%;
+  height:90vh;
+  box-shadow: rgba(0, 0, 12, 0.95) 0px 50px 100px -20px, rgba(0, 0, 0, 0.9) 0px 30px 60px -30px, rgba(10, 10, 10, 0.95) 0px -2px 6px 0px inset;
+  background-color: pink;
+  margin:auto;
+  border-radius: 20px;
+  
+}
+.DressDetailImg{
+  width:90%;
+  height:600px;
+  padding-top:30px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.dressDetailsDiv{
+  display:flex;
+  justify-content: space-around;
+}
+.DressDetailImg{
+  /* border:2px solid black; */
+}
+.dressDetails{
+  /* border:2px solid black; */
+  width:40%;
+  padding-top:20px;
+  /* padding-:20px; */
+  text-align: center;
+}
+.addToCart:hover{
+  padding:6px 20px;
+  border:2px solid black;
+  color:rgb(82, 17, 17);
+  margin:17px;
+  font-size: 25px;
+  font-family: Bree serif;
+  border-radius: 50px;
+  cursor:pointer;
+  width:200px;
+  height:50px;
+  background-color: white;;
+}
+.dressDetails h3{
+  color:rgb(125, 7, 80);
+}
+.dressDetails h1{
+  color:whitesmoke;
+}
+.imagelogo{
+  width:100px;
+  height:100px;
+}
+
+.center{
+  text-align:center;
+}
