@@ -1,12 +1,16 @@
 import React from 'react'
 import '../App.css';
 import { Link } from "react-router-dom";
+import { useContext } from 'react';
+import { DressnumberContext } from '../Context/DressnumberContext';
+import { Navigate } from 'react-router-dom';
 
 export default function CategorySection() {
+    const {userdata, setUserData, isAuth} = useContext(DressnumberContext)
     return (
         <div>
-            <section id="services-container">
-                <h1 className="h-primary-center">Our Services</h1>
+            <section style={{marginTop:"100px"}} id="services-container">
+                <h1  className="h-primary-center">Our Services</h1>
                 <div id="services">
 
                     <div className="box">
@@ -16,7 +20,13 @@ export default function CategorySection() {
                         <p className="center">"Fashion is part of the daily air and it changes all the time, with all the events. You can even see the approaching of a revolution in clothes. You can see and feel everything in clothes."</p>
                         <Link to="/dressDesigning">
 
-                            <button style={{ marginLeft: "150px" }} className='btn'>See More</button>
+                            <button style={{ marginLeft: "150px" }} onClick={() => {
+                                 if(!isAuth){
+                                    return <Navigate to={"/login"} />
+                                                                    }else {
+                                                                      return <Navigate to={`/dressDesigning`} />
+                                                                    }
+                            }} className='btn'>See More</button>
                         </Link>
 
                     </div>
@@ -27,7 +37,15 @@ export default function CategorySection() {
                         <p className="center">"You gotta have style. It helps you get down the stairs. It helps you get up in the morning. It’s a way of life. Without it, you’re nobody. I’m not talking about lots of clothes.”</p>
                         <Link to="/dressAlteration">
 
-                            <button style={{ marginLeft: "150px" }} className='btn'>See More</button>
+                            <button 
+                             onClick={() => {
+                                if(!isAuth){
+                                   return <Navigate to={"/login"} />
+                                                                   }else {
+                                                                     return <Navigate to={`/dressAlteration`} />
+                                                                   }
+                           }}
+                            style={{ marginLeft: "150px" }} className='btn'>See More</button>
                         </Link>
                     </div>
 
@@ -38,7 +56,15 @@ export default function CategorySection() {
                         <p className="center">"You can never take too much care over the choice of your shoes. Too many women think that they are unimportant, but the real proof of an elegant woman is what is on her feet."</p>
                         <Link to="/dressDelivery">
 
-                            <button style={{ marginLeft: "150px" }} className='btn'>See More</button>
+                            <button 
+                              onClick={() => {
+                                if(!isAuth){
+                                   return <Navigate to={"/login"} />
+                                                                   }else {
+                                                                     return <Navigate to={`/dressDelivery`} />
+                                                                   }
+                           }}
+                            style={{ marginLeft: "150px" }} className='btn'>See More</button>
                         </Link>
                     </div>
 

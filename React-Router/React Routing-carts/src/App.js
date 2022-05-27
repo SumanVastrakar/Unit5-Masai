@@ -11,6 +11,7 @@ import Error from './components/Error';
 import Navbar from './components/Navbar';
 import LogIn from './components/Login&Logout/LogIn';
 import { PrivateRoutes } from './components/PrivateRoutes/PrivateRoutes';
+import CategorySection from './components/CategorySection';
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
         <Route path="/dressAlteration" element={<DressAlteration />}></Route>
         <Route path="/dressDelivery" element={<DressDelivery/>}></Route>
         <Route path="/dressDetails/:id" element={<PrivateRoutes><DressDetails/></PrivateRoutes>}></Route>
+        <Route path="/" element={<PrivateRoutes><CategorySection/></PrivateRoutes>}></Route>
         <Route path="/login" element={<LogIn/>}></Route>
         <Route path="*" element={<Error/>}></Route>
       </Routes>

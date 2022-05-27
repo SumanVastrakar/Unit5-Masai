@@ -2,9 +2,13 @@ import React from 'react'
 import Navbar from './Navbar'
 import '../App.css'
 import Copywrite from './CopyWrite'
+import { DressnumberContext } from '../Context/DressnumberContext'
+import { useContext } from 'react';
+
 
 
 export default function DressAlteration() {
+  const {userdata, setUserData, isAuth} = useContext(DressnumberContext)
   return (
     <div>
       <Navbar/>

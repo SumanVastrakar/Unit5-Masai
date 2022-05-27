@@ -5,7 +5,7 @@ import Navbar from './Navbar'
 export default function Error() {
   return (
       <div>
-      <Navbar/>
+
     <div className='dressDetailsDiv center'>
       <h1>404 Error</h1>
       <br />

@@ -23,7 +23,7 @@ export default function Navbar() {
                     <li className="item"><Link to="/">
                         <pre>Home</pre>
                     </Link></li>
-                    <li className="item"><a href="#">
+                    <li className="item"><a href="/CategorySection">
                         <pre>Services</pre>
                     </a></li>
                     <li className="item"><a href="#">
