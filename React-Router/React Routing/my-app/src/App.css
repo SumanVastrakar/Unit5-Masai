@@ -1,0 +1,12 @@
+.App {
+  text-align: center;
+}
+
+.App th,tr,  td {
+  border : 2px solid black;
+  padding: 15px;
+}
+.App tr, td{
+  font-weight: 600;
+  font-size: 20px;
+}
