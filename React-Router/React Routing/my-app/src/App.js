@@ -1,10 +1,10 @@
-import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
-import {Routes, Route} from "react-router-dom"
+import {Routes, Route} from "react-router-dom";
 import Home from './components/Home';
 import ProductPage from './components/ProductPage';
 import ProductDetails from './components/ProductDetails';
+import Error from './components/Error';
 
 function App() {
   return (
@@ -14,6 +14,7 @@ function App() {
     <Route path="/"  element={<Home/>} />
     <Route path="/products"  element={<ProductPage/>} />
     <Route path="/:id"  element={<ProductDetails/>} />
+    <Route  path="*" element={<Error/>} />
    </Routes>
    
    </>
