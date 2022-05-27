@@ -35,9 +35,7 @@ useEffect(() =>{
          return navigate("/")
                
             }
-            else {
-                alert("Enter valid email and password")
-            }
+          
         })
 },[userdata])
 
