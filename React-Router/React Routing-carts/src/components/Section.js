@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 
 export default function Section() {
 
-  const [  min, setMin] = useState(30);
+  const [  min, setMin] = useState(1);
   const [sec, setSec] = useState(50);
   const [hour, setHour] = useState(12)
   const [ stop, setStop] = useState(true);
@@ -15,9 +15,9 @@ export default function Section() {
     let interval = null;
     if(stop){
     interval = setInterval(() =>{
-      if( min == 59){
-setHour(hour + 1);
-setMin(0)
+      if( min == 0){
+setHour(hour - 1);
+setMin(59)
       }
       if( min == 0 && sec == 0){
         setMin(0);
