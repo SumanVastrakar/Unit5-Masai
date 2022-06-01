@@ -1,0 +1,24 @@
+{
+  "todo": [
+    {
+      "title": "learn react",
+      "status": false,
+      "id": 1
+    },
+    {
+      "title": "learn pagination",
+      "status": false,
+      "id": 2
+    },
+    {
+      "title": "learn redux",
+      "status": false,
+      "id": 3
+    },
+    {
+      "title": "learn redux-toolkit",
+      "status": false,
+      "id": 4
+    }
+  ]
+}
