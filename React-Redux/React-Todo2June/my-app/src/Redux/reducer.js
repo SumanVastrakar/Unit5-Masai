@@ -11,6 +11,7 @@ export const TodoReducers = (store = initialState, {type, payload}) => {
             ...store, todos : payload,
         };
         case DELETE_TODO : return {
+            ...store, todos : store.todos.filter((e) => e.id !== payload)
 
         };
         case SORT_TODO : return {

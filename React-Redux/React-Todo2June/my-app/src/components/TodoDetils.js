@@ -1,11 +1,17 @@
 import React, { useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { Navigate, useNavigate, useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom';
 import axios from "axios";
+import { useDispatch, useSelector } from 'react-redux';
+import { deleteTodo } from '../Redux/action';
 
 export default function TodoDetils() {
     const [data, setData] = useState({});
     const {id} = useParams();
+    const navigate = useNavigate();
+
+    const dispatch = useDispatch();
+    const todo = useSelector(store => store.todos.todos)
 
 const ToggleTodo = () => {
 axios.patch(`http://localhost:8080/todo/${id}`,{
@@ -16,6 +22,13 @@ axios.patch(`http://localhost:8080/todo/${id}`,{
     console.log(error)
 })
 }
+
+const handleDelete = () =>{
+    axios.delete(`http://localhost:8080/todo/${id}`)
+    navigate( -1, {replace: true})
+
+}
+
     useEffect(() => {
      getData();
     },[])
@@ -24,6 +37,7 @@ axios.patch(`http://localhost:8080/todo/${id}`,{
        setData(data);
 
     }
+
 
   return (
     <div>
@@ -35,7 +49,7 @@ axios.patch(`http://localhost:8080/todo/${id}`,{
   
    <button onClick={ToggleTodo}>Marks as Done</button>
    
-   <button>Delete</button> 
+   <button onClick={handleDelete}>Delete</button> 
     </div>
   )
 }
