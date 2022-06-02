@@ -15,6 +15,8 @@ export const TodoReducers = (store = initialState, {type, payload}) => {
 
         };
         case SORT_TODO : return {
+            ...store, todos : [...store.todos].sort((a,b) => a[payload] > b[payload] ? 1 : a[payload] < b[payload] ? -1  : 0)
+
 
         };
         case FILTER_TODO : return {
