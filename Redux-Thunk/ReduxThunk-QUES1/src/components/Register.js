@@ -6,7 +6,7 @@ import { store } from '../Redux/store';
 
 export default function Register() {
   const dispatch = useDispatch();
-  const users = useSelector(store => store.user.userRegister)
+  const users = useSelector(store => store.userRegister.user)
   console.log(store.getState())
   console.log(users)
     const[form, setForm] = useState({
@@ -35,7 +35,7 @@ export default function Register() {
         },
         body : JSON.stringify(payload),
        }).then(res => res.json()).then(data => {
-        console.log(data)
+        console.log("response",data)
        })
     }
 
