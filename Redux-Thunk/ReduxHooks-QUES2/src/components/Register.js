@@ -40,6 +40,8 @@ export default function Register() {
         console.log("response",data)
         if(data.error == false){
           navigate("/login", {replace:true})
+        }else {
+          alert("User Already Exist")
         }
        })
 

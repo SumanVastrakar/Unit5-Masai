@@ -38,6 +38,8 @@ export default function Login() {
             if(data.token != null) {
                 dispatch(loginSuccess(form.username, data.token))
                 navigate("/dashboard", {replace:true})
+            }else {
+                alert("Invalid Credentials")
             }
         })
     }
