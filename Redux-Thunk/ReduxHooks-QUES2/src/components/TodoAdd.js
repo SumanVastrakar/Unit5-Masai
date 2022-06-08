@@ -3,16 +3,11 @@ import { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import "../App.css"
 import { postTodo } from '../Redux/TodoAdd/action';
+import { useSelector } from 'react-redux';
 
 export default function TodoAdd() {
-  // const [multselect, setMultipleselect] = ({
-  //   official : false,
-  //   personal : false,
-  //   others : false
-  // })
-  // const checkList = (e) => {
-  //   const {name, checked} = e.target; 
-  // }
+  const user = useSelector(store => store.userLogin.user)
+  console.log("hello user",user[0], "token", user[1]);
 const dispatch = useDispatch();
   let checkMultiple = [];
   const[task, setTask] = useState ({
@@ -21,6 +16,7 @@ const dispatch = useDispatch();
     date : "",
     status : "",
     tags: [],
+    token : ""
   })
   const handleChange = (e) => {
     const {name, value} = e.target ;
@@ -46,12 +42,15 @@ const dispatch = useDispatch();
 
   const  handledate = (e) =>{
     setTask({
-      ...task, date : e.target.value
+      ...task, date : e.target.value, token : user[1]
     })
   }
 
   const handleSubmit = () => {
-    console.log(checkMultiple)
+    // setTask({
+    //   ...task, token : user[1]
+    // })
+    // console.log(checkMultiple)
 
 dispatch(postTodo(task))
 
@@ -63,6 +62,7 @@ setTask({
   date : null,
   status : "",
   tags: [],
+  token : ""
 })
 
 

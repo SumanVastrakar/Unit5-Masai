@@ -7,8 +7,18 @@ import { getUserData } from '../Redux/userDetail.js/action';
 export default function UserDetails() {
 
   let todo =[], progress =[], done =[];
-  const user = useSelector(store => store.userDetails.userDetails);
-  console.log("user", user);
+  const allUser = useSelector(store => store.userDetails.userDetails);
+  const userDetails = useSelector(store => store.userLogin.user)
+  // console.log("hello user",user[0], "token", user[1]);
+
+  console.log("user", allUser);
+
+  let user = [];
+  for( let i = 0; i < allUser.length; i++){
+    if( userDetails[1] == allUser[i].token){
+      user.push(allUser[i])
+    }
+  }
 
   const dispatch = useDispatch();
   useEffect(() => {
