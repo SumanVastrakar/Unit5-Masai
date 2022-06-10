@@ -10,7 +10,7 @@ export default function AllRoutes() {
     <div>
       <Routes>
         <Route path="/" element={<Homepage/>}></Route>
-        <Route path="/product" element={<Product/>}></Route>
+        <Route path="/products/:id" element={<Product/>}></Route>
         <Route path="/products" element={<Products/>}></Route>
         <Route path="/cart" element={<Cart/>}></Route>
       </Routes>

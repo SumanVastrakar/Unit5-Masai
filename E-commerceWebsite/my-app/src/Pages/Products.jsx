@@ -5,6 +5,7 @@ import { store } from '../Redux/store'
 import { useSelector, useDispatch} from 'react-redux/es/exports'
 import { fetchData } from '../Redux/action'
 import {useSearchParams} from "react-router-dom"
+import {Link} from "react-router-dom"
 import {
   
     Center,
@@ -38,21 +39,31 @@ category : searchParams.getAll("category")
   return (
   <Box>
     <Stack display ={{md :"flex"}} flexDirection={{md : "row"}}>
-    <Box>
+    <Box minWidth={"15rem"}>
 <FilterComponents/>
     </Box>
     <Box>
         <Heading as = "h3">Products</Heading>
         <Flex flexWrap="wrap" justifyContent="space-around">
-            {
+        
+          {
                 products.map( elem =>{
-                    return <ProductSimple key={elem.id} 
-                    image={elem.image}
-                    title={elem.title}
-                    price ={elem.price}
-                    />
+               
+                    return(
+                      <Link to={`/products/${elem.id}`}>
+                      <ProductSimple key={elem.id} 
+                      image={elem.image}
+                      title={elem.title}
+                      price ={elem.price}
+                      />
+                         </Link>
+                    )
+              
+            
                 } )
             }
+   
+          
         </Flex>
        <ProductSimple/>
     </Box>
@@ -99,15 +110,15 @@ function ProductSimple({image, title, price}) {
             }}>
             <Image
               rounded={'lg'}
-              height={230}
-              width={282}
+              height={260}
+              width={230}
               objectFit={'container'}
               src={image}
             />
           </Box>
           <Stack pt={10} align={'center'}>
           
-            <Heading fontSize={'2xl'} fontFamily={'body'} fontWeight={500}>
+            <Heading fontSize={'xl'} fontFamily={'body'} fontWeight={500}>
               {title}
             </Heading>
             <Stack direction={'row'} align={'center'}>

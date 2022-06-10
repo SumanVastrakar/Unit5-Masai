@@ -8,7 +8,7 @@ import {
     Stack,
     Collapse,
     Icon,
-    Link,
+
     Popover,
     PopoverTrigger,
     PopoverContent,
@@ -16,12 +16,17 @@ import {
     useBreakpointValue,
     useDisclosure,
   } from '@chakra-ui/react';
+  import {BsCart3} from "react-icons/bs"
   import {
     HamburgerIcon,
     CloseIcon,
     ChevronDownIcon,
     ChevronRightIcon,
   } from '@chakra-ui/icons';
+import Profile from './Profile';
+import CartCounter from './CartCounter';
+import {Link} from "react-router-dom"
+
 
 export default function Navbar() {
     const { isOpen, onToggle } = useDisclosure();
@@ -68,26 +73,13 @@ export default function Navbar() {
         justify={'flex-end'}
         direction={'row'}
         spacing={6}>
-        <Button
-          as={'a'}
-          fontSize={'sm'}
-          fontWeight={400}
-          variant={'link'}
-          href={'#'}>
-          Sign In
-        </Button>
-        <Button
-          display={{ base: 'none', md: 'inline-flex' }}
-          fontSize={'sm'}
-          fontWeight={600}
-          color={'white'}
-          bg={'pink.400'}
-          href={'#'}
-          _hover={{
-            bg: 'pink.300',
-          }}>
-          Sign Up
-        </Button>
+          <Link to="/cart">
+          <Box position="relative" padding ="0 0.5 rem 0 0">
+          <CartCounter/>
+          <Icon as ={BsCart3} boxSize="2rem"/>
+          </Box>
+          </Link>
+    <Profile/>
       </Stack>
     </Flex>
 
